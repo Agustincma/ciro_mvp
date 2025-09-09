@@ -49,7 +49,7 @@ const DiagonalSection: React.FC<DiagonalSectionInfo> = ({
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          px: 2,
+          px: 2
         }}
       >
         {/* Franjas diagonales */}

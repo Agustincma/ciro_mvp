@@ -27,7 +27,7 @@ export const AboutUsPage = () => {
         inverter={false}
         size="XXL"
       >
-        <Box data-aos="fade-right">
+        <Box data-aos="fade-right" sx={{display: 'flex', justifyContent: 'center'}}>
           <PersonalInfo
             image="/pexels-kindelmedia-9875408.jpg"
             name="Agustin Cardozo"
@@ -41,7 +41,7 @@ export const AboutUsPage = () => {
           <Divider color="#fbbf24" variant="middle" />
         </Box>
 
-        <Box data-aos="fade-left" data-aos-delay="400">
+        <Box data-aos="fade-left" data-aos-delay="400" sx={{display: 'flex', justifyContent: 'center'}}>
           <PersonalInfo
             image="/pexels-kindelmedia-9875408.jpg"
             name="Agustin Cardozo"

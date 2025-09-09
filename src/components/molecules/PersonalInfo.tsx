@@ -75,7 +75,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         gap: 4,
-        margin: 10,
+        margin: 10
       }}
     >
       {inverter ? (

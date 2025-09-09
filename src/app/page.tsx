@@ -62,15 +62,45 @@ export default function Home() {
       </DiagonalSection>
 
       <DiagonalSection topColor="#363636" bottomColor="#363636" background="#363636" inverter={false} size="L">
+        <Typography variant="h3" color="#fff" textAlign="center" data-aos="fade-right">
+          Title
+        </Typography>
         <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', gap: 5 }}>
+
           <Box data-aos="fade-up">
-            <CardInfo image="/coding-1-60.svg" title="Title 1" description="Descripción 1" />
+            <CardInfo
+              image="/pexels-kindelmedia-9875408.jpg"
+              title="Title 1"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              showButton={true}
+              buttonPath="/contacto"
+              buttonText="Ir"
+              category="Mecanica"
+            />
           </Box>
           <Box data-aos="fade-up" data-aos-delay="200">
-            <CardInfo image="/coding-1-60.svg" title="Title 2" description="Descripción 2" />
+            <CardInfo
+              image="/pexels-kindelmedia-9875408.jpg"
+              title="Title 2"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              showButton={true}
+              buttonPath="/contacto"
+              buttonText="Ir"
+              category="Electrical"
+            />
           </Box>
           <Box data-aos="fade-up" data-aos-delay="400">
-            <CardInfo image="/coding-1-60.svg" title="Title 3" description="Descripción 3" />
+            <CardInfo
+              image="/pexels-kindelmedia-9875408.jpg"
+              title="Title 3"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              showButton={true}
+              buttonPath="/contacto"
+              buttonText="Ir"
+              category="Herreria"
+              chips={['TENDIDO DE CABLES', "INSTALACIONES", "CAMARAS"]}
+            />
+
           </Box>
         </Container>
       </DiagonalSection>
@@ -84,7 +114,7 @@ export default function Home() {
       </DiagonalSection>
 
       <Footer
-      background="#363636"
+        background="#363636"
       />
     </>
   );
