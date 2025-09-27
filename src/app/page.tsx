@@ -70,12 +70,13 @@ export default function Home() {
           <Box data-aos="fade-up">
             <CardInfo
               image="/pexels-kindelmedia-9875408.jpg"
-              title="Title 1"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+              title="Refrigeracion"
+              description="Soluciones en refrigeración hasta 5 toneladas: aire acondicionado, chillers, centrales, piso-techo. Eficiencia, confort y tecnología para tu espacio."
               showButton={true}
               buttonPath="/contacto"
               buttonText="Ir"
-              category="Mecanica"
+              category="Refrigeracion"
+              color="#000"
             />
           </Box>
           <Box data-aos="fade-up" data-aos-delay="200">
@@ -87,6 +88,7 @@ export default function Home() {
               buttonPath="/contacto"
               buttonText="Ir"
               category="Electrical"
+              color="#fff"
             />
           </Box>
           <Box data-aos="fade-up" data-aos-delay="400">

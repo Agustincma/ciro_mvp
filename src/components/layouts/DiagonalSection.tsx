@@ -9,6 +9,7 @@ type DiagonalSectionInfo = {
   backgroundImage?: string; // nueva prop
   inverter?: boolean;
   size?: 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
+  children: {}
 };
 
 const DiagonalSection: React.FC<DiagonalSectionInfo> = ({
@@ -49,6 +50,7 @@ const DiagonalSection: React.FC<DiagonalSectionInfo> = ({
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          alignContent: 'center',
           px: 2
         }}
       >
@@ -98,7 +100,16 @@ const DiagonalSection: React.FC<DiagonalSectionInfo> = ({
         )}
 
         {/* Contenido centrado */}
-        <Box sx={{ position: 'relative', zIndex: 1, width: '100%' }}>
+        <Box sx={{
+          position: 'relative',
+          zIndex: 1,
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: 4 // espacio entre los SolutionComponent
+        }}>
           {children}
         </Box>
       </Box>

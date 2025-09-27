@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Link } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 type PersonalInfoProps = {
@@ -12,6 +12,7 @@ type PersonalInfoProps = {
   linkedIn: string;
   colorText?: string;
   inverter?: boolean;
+  href?: string;
 };
 
 export const PersonalInfo: React.FC<PersonalInfoProps> = ({
@@ -20,10 +21,11 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
   title,
   description,
   linkedIn,
-  colorText = "#fff",
+  colorText = "#000",
   inverter = false,
+  href = ''
 }) => {
-  // bloque imagen + nombre
+
   const imageBlock = (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Box
@@ -33,7 +35,7 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
         sx={{
           width: 400,
           height: 400,
-          borderRadius: '50%', // redondo
+          borderRadius: '50%',
           objectFit: 'cover',
           mb: 1,
           border: '2px solid #fbbf24',
@@ -45,7 +47,6 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
     </Box>
   );
 
-  // bloque info
   const infoBlock = (
     <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <Typography variant="h3" color={colorText} fontWeight="bold" sx={{ mb: 1 }}>
@@ -62,7 +63,11 @@ export const PersonalInfo: React.FC<PersonalInfoProps> = ({
           aria-label="LinkedIn"
           sx={{ color: '#0e76a8' }}
         >
-          <LinkedInIcon fontSize="large" />
+          <Link rel="perfil" href={href} children={
+
+            <LinkedInIcon fontSize="large" />
+          } />
+
         </IconButton>
       </Box>
     </Box>

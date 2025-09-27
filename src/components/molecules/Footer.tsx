@@ -3,7 +3,7 @@ import { Box, Typography, Link, Stack, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 type FooterColor = {
-  background: string;
+  background?: string;
 }
 
 export const Footer: React.FC<FooterColor> = ({background = "#363636"}) => {

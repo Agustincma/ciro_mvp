@@ -127,24 +127,67 @@ export default function Navbar() {
               <Link href="/servicios/instalacion-camaras" passHref>
                 <MenuItem onClick={handleCloseMenu}>Instalación de cámaras</MenuItem>
               </Link>
-              <Link href="/servicios/tendido-cables" passHref>
+              {/* <Link href="/servicios/tendido-cables" passHref>
                 <MenuItem onClick={handleCloseMenu}>Tendido de cables</MenuItem>
+              </Link> */}
+              <MenuItem onClick={handleOpenSubMenu} sx={{ justifyContent: "space-between" }}>
+              <Link href="/servicios/climatizacion" passHref>
+                Climatizacion
               </Link>
-              <Link href="/servicios/analisis-temperatura" passHref>
+                <ExpandMore
+                  sx={{
+                    transition: "transform 0.3s",
+                    transform: subAnchorEl ? "rotate(180deg)" : "rotate(-90deg)",
+                  }}
+                />
+              </MenuItem>
+              <Menu
+                anchorEl={subAnchorEl}
+                open={Boolean(subAnchorEl)}
+                onClose={handleCloseSubMenu}
+                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
+                PaperProps={{
+                  elevation: 4,
+                  sx: { borderRadius: 2, mt: 0.5, minWidth: 200 },
+                }}
+              >
+                <Link href="/servicios/climatizacion/brand/samsung" passHref>
+                  <MenuItem onClick={handleCloseMenu}>Samsung</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/bgh" passHref>
+                  <MenuItem onClick={handleCloseMenu}>BGH</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/lg" passHref>
+                  <MenuItem onClick={handleCloseMenu}>LG</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/carrier" passHref>
+                  <MenuItem onClick={handleCloseMenu}>Carrier</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/daikin" passHref>
+                  <MenuItem onClick={handleCloseMenu}>Daikin</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/surey" passHref>
+                  <MenuItem onClick={handleCloseMenu}>Surey</MenuItem>
+                </Link>
+                <Link href="/servicios/climatizacion/brand/york" passHref>
+                  <MenuItem onClick={handleCloseMenu}>York</MenuItem>
+                </Link>
+              </Menu>
+              {/* <Link href="/servicios/analisis-temperatura" passHref>
                 <MenuItem onClick={handleCloseMenu}>Análisis de temperatura</MenuItem>
-              </Link>
+              </Link> */}
             </Menu>
           </div>
 
-          {/* Otros enlaces */}
           <Link href="/formacion" passHref>
             <Typography variant="body1" sx={{ color: "black", textDecoration: "none" }}>
               Formación
             </Typography>
           </Link>
-          <Link href="/blog" passHref>
+          <Link href="/brand" passHref>
             <Typography variant="body1" sx={{ color: "black", textDecoration: "none" }}>
-              Blog
+              Marcas
             </Typography>
           </Link>
           <Link href="/acerca" passHref>

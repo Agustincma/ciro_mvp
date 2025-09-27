@@ -10,6 +10,10 @@ type CardDataInfo = {
   chips?: string[];
   category?: string;
   image?: string;
+  color?: string;
+  showButton?: boolean
+  buttonPath?: string
+  buttonText?: string
 };
 
 export const CardInfo: React.FC<CardDataInfo> = ({
@@ -17,7 +21,8 @@ export const CardInfo: React.FC<CardDataInfo> = ({
   description = "dddddd",
   chips = ["UI/UX DESIGN", "PRODUCT DESIGN", "WEB DEVELOPMENT", "BRANDING"],
   category = "completar",
-  image = "/pexels-kindelmedia-9875408.jpg"
+  image = "/pexels-kindelmedia-9875408.jpg",
+  color = "#363636",
 }) => {
   return (
     <Card
@@ -68,7 +73,7 @@ export const CardInfo: React.FC<CardDataInfo> = ({
               label={chip}
               sx={{
                 backgroundColor: "#fbbf24",
-                color: "#fff",
+                color: {color},
                 borderRadius: "20px",
                 fontWeight: 'bold',
               }}
